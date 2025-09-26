@@ -101,9 +101,9 @@ conda update -n anthelminthic_treatment --file code/analysis/conda_env.R.yaml
 ```
 conda activate anthelminthic_treatment
 R
-devtools::install_github(repo = "malucalle/selbal")
-devtools::install_github(repo = "gauravsk/ranacapa")
-devtools::install_github(repo = "gmteunisse/fantaxtic")
+devtools::install_github(repo = "malucalle/selbal", ref="9f7ff2b")
+devtools::install_github(repo = "gauravsk/ranacapa", ref="58c0cab")
+devtools::install_github(repo = "gmteunisse/fantaxtic", ref="b822d7f")
 ```
 
 #### Files
