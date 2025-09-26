@@ -20,6 +20,7 @@ library(pROC)
 ```
 
 ```{r}
+dir.create(file.path('../../results/tables'), showWarnings = FALSE)
 dir.create(file.path('../../results/figures'), showWarnings = FALSE)
 dir.create(file.path('../../results/figures', 'figure5'), showWarnings = FALSE)
 dir.create(file.path('../../results/figures', 'supplementary_figure6'), showWarnings = FALSE)
@@ -209,10 +210,7 @@ y[y != 'notTreated'] <- TRUE
 y[y == 'notTreated'] <- FALSE
 y <- factor(as.numeric(as.logical(y)))
 
-dev.off()
-sink("/dev/null")
 cv.res <- selbal.cv(x, y, n.iter=5, seed=224)
-sink()
 ```
 
 ```{r}
