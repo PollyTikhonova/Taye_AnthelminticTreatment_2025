@@ -48,9 +48,9 @@ Please note that the codes in this repository were tested on Linux x86_64 system
 
 #### Instructions
 _Please note that running the processing pipeline is optional since the final phyloseq objects necessary for the analysis are provided in this repository._
-1. Install dependencies (~10 min).
+1. Install dependencies (~10 min). In case of version incompatibility errors, please set the conda `channel_priority` to `flexible`.
 2. The raw data is publicly available at the European Nucleotide Archive (ENA) under accession number [PRJEB93790](https://www.ebi.ac.uk/ena/browser/view/PRJEB93790). Please download the fastq.gz files to the `data/reads/raw` directory and follow the proposed directory structure: `sample_name/sample_name_R*.fastq.qz`. The metadata file should be saved as a `data/metadata.tsv` file (a tab-separated format). 
-3. Download Silva database version 132 (https://zenodo.org/records/1172783) to the `data/database` directory.
+3. Download Silva database version 132 (https://zenodo.org/records/1172783) to the `data/database` directory. Please, make sure to download both files: `silva_nr_v132_train_set.fa.gz` and `silva_species_assignment_v132.fa.gz`. 
 4. (optional) In case of custom paths to the raw files and database, please modify the corresponding parameters in the `code/processing/config.yaml` file.
 5. Run Snakemodule
 ``` 
@@ -95,7 +95,7 @@ __Snakemodule Steps__
 1. Create and install a new conda environment (~30 min)
 ```
 conda create -n anthelminthic_treatment
-conda env update -n anthelminthic_treatment --file code/analysis/conda_env.R.yaml
+conda update -n anthelminthic_treatment --file code/analysis/conda_env.R.yaml
 ```
 2. Install additional R libraries:
 ```
