@@ -1,0 +1,37 @@
+from copy import deepcopy
+#https://snakemake.readthedocs.io/en/stable/snakefiles/deployment.html#use-with-modules
+configfile: "0.1.download_and_process/config.yaml"
+
+wildcard_constraints:
+    strand = '1|2',
+    study_name = '|'.join(config["study_names"])
+
+# Configuration variables
+conda_dir = config["conda_dir"]
+scripts_dir = config["scripts_dir"]
+
+def update_(config_file, name):
+    config_copy = deepcopy(config_file)
+    config_copy.update(config_file[name])
+    return config_copy
+
+def combine_studies(config_file):
+    config_copy = deepcopy(config_file)
+    config_copy['study_names'] = config_copy['study_names'] + config_copy['TwinsUK']['study_names']
+    return config_copy
+
+module download:
+    snakefile: "1.download.smk"
+    config: config
+use rule * from download as *
+
+module multiqc:
+    snakefile: "2.multiqc.smk"
+    config: config
+use rule * from multiqc as *
+
+rule all:
+    input:
+        rules.download_all.input,
+        rules.multiqc_all.input
+    default_target: True

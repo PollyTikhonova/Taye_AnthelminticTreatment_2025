@@ -1,0 +1,28 @@
+from copy import deepcopy
+#https://snakemake.readthedocs.io/en/stable/snakefiles/deployment.html#use-with-modules
+configfile: "0.1.download_and_process/config.yaml"
+
+wildcard_constraints:
+    strand = '1|2',
+    study_name = '|'.join(config["study_names"])
+
+# Configuration variables
+conda_dir = config["conda_dir"]
+scripts_dir = config["scripts_dir"]
+
+
+module filter_and_trim:
+    snakefile: "1.filter_and_trim.smk"
+    config: config
+use rule * from filter_and_trim as *
+
+module dada2:
+    snakefile: "2.dada2.smk"
+    config: config
+use rule * from dada2 as *
+
+rule all:
+    input:
+        rules.dada_filter_and_trim_all.input,
+        rules.dada2_all.input#,
+    default_target: True

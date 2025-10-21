@@ -1,0 +1,10 @@
+channels: 
+- bioconda
+- conda-forge
+dependencies:
+- sra-tools
+- seqtk
+- trimmomatic
+- pip:
+  - git+https://github.com/RCPCM-GCB/ENA_tool
+  - lxml
