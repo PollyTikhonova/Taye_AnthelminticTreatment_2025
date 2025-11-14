@@ -1,6 +1,6 @@
 ---
-title: An R Markdown document converted from "github/Taye_AntihelminthicTreatment_2025/code/analysis/Figure
-  2. PCoA based on Bray-Curtis distance. Baseline and follow-up groups.ipynb"
+title: An R Markdown document converted from "./Figure 2. PCoA based on Bray-Curtis
+  distance. Baseline and follow-up groups.ipynb"
 output: html_document
 ---
 
@@ -90,6 +90,12 @@ levels(pcoa_coordinates$collection_timepoint) <- c("Before deworming", "1-year f
 ```
 
 ```{r}
+# calculate explained variance
+explained_variance_proportions <- pcoa_res$values$Relative_eig
+explained_variance_percents <- explained_variance_proportions * 100
+```
+
+```{r}
 # compute biplot (project microbial genera on new axis)
 loadings <- compute_loadings(pcoa_res, otu_data)
 # choose top 5 loadings with largest covariance for first 2 PC axis
@@ -137,7 +143,9 @@ p_braycurtis <- ggplot() +
       scale_x_continuous(expand = expansion(mult = 0.1)) +
       scale_y_continuous(expand = expansion(mult = 0.1)) +
 # add titles
-      labs(title = "PCoA: Bray-Curtis distance", 
+      labs(x = paste0("PCoA 1 (", sprintf('%.2f', explained_variance_percents[1]), "%)"), 
+           y = paste0("PCoA 2 (", sprintf('%.2f', explained_variance_percents[2]), "%)"), 
+           title = "PCoA: Bray-Curtis distance", 
            subtitle = "Baseline & 1-year follow-up", 
            caption = paste0("PERMANOVA p-value = ", permanova_braycurtis['collection_timepoint', 'Pr(>F)'])) +
 # custom plot design

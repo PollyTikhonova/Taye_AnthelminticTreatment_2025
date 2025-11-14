@@ -1,6 +1,5 @@
 ---
-title: An R Markdown document converted from "github/Taye_AntihelminthicTreatment_2025/code/analysis/Figure
-  1. Data Overview.ipynb"
+title: An R Markdown document converted from "./Figure 1. Data Overview.ipynb"
 output: html_document
 ---
 

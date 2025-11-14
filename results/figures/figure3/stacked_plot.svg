@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='svglite' width='172.80pt' height='108.00pt' viewBox='0 0 172.80 108.00'>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='svglite' width='129.60pt' height='108.00pt' viewBox='0 0 129.60 108.00'>
 <defs>
   <style type='text/css'><![CDATA[
     .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
@@ -16,79 +16,87 @@
 </defs>
 <rect width='100%' height='100%' style='stroke: none; fill: none;'/>
 <defs>
-  <clipPath id='cpMC4wMHwxNzIuODB8MC4wMHwxMDguMDA='>
-    <rect x='0.00' y='0.00' width='172.80' height='108.00' />
+  <clipPath id='cpMC4wMHwxMjkuNjB8MC4wMHwxMDguMDA='>
+    <rect x='0.00' y='0.00' width='129.60' height='108.00' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpMC4wMHwxNzIuODB8MC4wMHwxMDguMDA=)'>
+<g clip-path='url(#cpMC4wMHwxMjkuNjB8MC4wMHwxMDguMDA=)'>
 </g>
 <defs>
-  <clipPath id='cpMTYuNzF8NjUuMjN8MS42NHwxMDQuMjA='>
-    <rect x='16.71' y='1.64' width='48.51' height='102.55' />
+  <clipPath id='cpMTYuNzF8NjcuMDR8MS42NHwxMDQuMjA='>
+    <rect x='16.71' y='1.64' width='50.33' height='102.55' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpMTYuNzF8NjUuMjN8MS42NHwxMDQuMjA=)'>
-<polyline points='16.71,89.95 65.23,89.95 ' style='stroke-width: 0.16; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='16.71,61.47 65.23,61.47 ' style='stroke-width: 0.16; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='16.71,32.98 65.23,32.98 ' style='stroke-width: 0.16; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='16.71,4.49 65.23,4.49 ' style='stroke-width: 0.16; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='16.71,104.20 65.23,104.20 ' style='stroke-width: 0.32; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='16.71,75.71 65.23,75.71 ' style='stroke-width: 0.32; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='16.71,47.22 65.23,47.22 ' style='stroke-width: 0.32; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='16.71,18.74 65.23,18.74 ' style='stroke-width: 0.32; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='29.94,104.20 29.94,1.64 ' style='stroke-width: 0.32; stroke: #EBEBEB; stroke-linecap: butt;' />
-<polyline points='51.99,104.20 51.99,1.64 ' style='stroke-width: 0.32; stroke: #EBEBEB; stroke-linecap: butt;' />
-<rect x='20.02' y='5.06' width='19.85' height='99.13' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E5E5E5;' />
-<rect x='42.07' y='52.92' width='19.85' height='51.28' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E5E5E5;' />
-<rect x='20.02' y='16.46' width='19.85' height='3.42' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #773501;' />
-<rect x='20.02' y='19.88' width='19.85' height='6.84' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #B47E54;' />
-<rect x='20.02' y='26.71' width='19.85' height='77.48' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #D19564;' />
-<rect x='42.07' y='59.76' width='19.85' height='6.84' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #773501;' />
-<rect x='42.07' y='100.78' width='19.85' height='3.42' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #DBB99D;' />
-<rect x='42.07' y='66.59' width='19.85' height='34.18' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #B47E54;' />
-<rect x='20.02' y='28.99' width='19.85' height='2.28' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #3E2248;' />
-<rect x='20.02' y='31.27' width='19.85' height='10.26' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #5C396F;' />
-<rect x='20.02' y='41.53' width='19.85' height='2.28' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #6D4B88;' />
-<rect x='20.02' y='43.80' width='19.85' height='3.42' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #9071AA;' />
-<rect x='20.02' y='47.22' width='19.85' height='17.09' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #AC96D2;' />
-<rect x='20.02' y='64.31' width='19.85' height='39.88' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #D8BDDC;' />
-<rect x='42.07' y='74.57' width='19.85' height='3.42' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #5C396F;' />
-<rect x='42.07' y='77.99' width='19.85' height='6.84' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #AC96D2;' />
-<rect x='42.07' y='84.83' width='19.85' height='19.37' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #D8BDDC;' />
-<rect x='16.71' y='1.64' width='48.51' height='102.55' style='stroke-width: 0.32; stroke: #B3B3B3;' />
+<g clip-path='url(#cpMTYuNzF8NjcuMDR8MS42NHwxMDQuMjA=)'>
+<polyline points='16.71,89.95 67.04,89.95 ' style='stroke-width: 0.16; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='16.71,61.47 67.04,61.47 ' style='stroke-width: 0.16; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='16.71,32.98 67.04,32.98 ' style='stroke-width: 0.16; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='16.71,4.49 67.04,4.49 ' style='stroke-width: 0.16; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='16.71,104.20 67.04,104.20 ' style='stroke-width: 0.32; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='16.71,75.71 67.04,75.71 ' style='stroke-width: 0.32; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='16.71,47.22 67.04,47.22 ' style='stroke-width: 0.32; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='16.71,18.74 67.04,18.74 ' style='stroke-width: 0.32; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='30.44,104.20 30.44,1.64 ' style='stroke-width: 0.32; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='53.31,104.20 53.31,1.64 ' style='stroke-width: 0.32; stroke: #EBEBEB; stroke-linecap: butt;' />
+<rect x='20.14' y='30.13' width='20.59' height='74.07' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E5E5E5;' />
+<rect x='43.02' y='57.48' width='20.59' height='46.72' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E5E5E5;' />
+<rect x='20.14' y='42.66' width='20.59' height='61.53' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #329B96;' />
+<rect x='20.14' y='51.78' width='20.59' height='43.30' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #773501;' />
+<rect x='20.14' y='95.08' width='20.59' height='6.84' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #B47E54;' />
+<rect x='20.14' y='101.92' width='20.59' height='2.28' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #D19564;' />
+<rect x='43.02' y='66.59' width='20.59' height='29.63' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #773501;' />
+<rect x='43.02' y='100.78' width='20.59' height='3.42' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #DBB99D;' />
+<rect x='43.02' y='96.22' width='20.59' height='4.56' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #B47E54;' />
+<rect x='20.14' y='64.31' width='20.59' height='3.42' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #9467BD;' />
+<rect x='20.14' y='67.73' width='20.59' height='2.28' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #3E2248;' />
+<rect x='20.14' y='70.01' width='20.59' height='13.67' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #5C396F;' />
+<rect x='20.14' y='83.69' width='20.59' height='3.42' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #6D4B88;' />
+<rect x='20.14' y='87.10' width='20.59' height='10.26' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #9071AA;' />
+<rect x='20.14' y='97.36' width='20.59' height='6.84' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #AC96D2;' />
+<rect x='43.02' y='81.41' width='20.59' height='6.84' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #5C396F;' />
+<rect x='43.02' y='88.24' width='20.59' height='3.42' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #6D4B88;' />
+<rect x='43.02' y='99.64' width='20.59' height='4.56' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #D8BDDC;' />
+<rect x='43.02' y='91.66' width='20.59' height='5.70' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #9071AA;' />
+<rect x='43.02' y='97.36' width='20.59' height='2.28' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #AC96D2;' />
+<rect x='16.71' y='1.64' width='50.33' height='102.55' style='stroke-width: 0.32; stroke: #B3B3B3;' />
 </g>
-<g clip-path='url(#cpMC4wMHwxNzIuODB8MC4wMHwxMDguMDA=)'>
+<g clip-path='url(#cpMC4wMHwxMjkuNjB8MC4wMHwxMDguMDA=)'>
 <polyline points='16.71,104.20 16.71,1.64 ' style='stroke-width: 0.32; stroke: #A9A9A9; stroke-linecap: butt;' />
 <text x='15.23' y='105.84' text-anchor='end' style='font-size: 4.50px;fill: #4D4D4D; font-family: "DejaVu Sans";' textLength='2.87px' lengthAdjust='spacingAndGlyphs'>0</text>
 <text x='15.23' y='77.35' text-anchor='end' style='font-size: 4.50px;fill: #4D4D4D; font-family: "DejaVu Sans";' textLength='5.73px' lengthAdjust='spacingAndGlyphs'>25</text>
 <text x='15.23' y='48.86' text-anchor='end' style='font-size: 4.50px;fill: #4D4D4D; font-family: "DejaVu Sans";' textLength='5.73px' lengthAdjust='spacingAndGlyphs'>50</text>
 <text x='15.23' y='20.38' text-anchor='end' style='font-size: 4.50px;fill: #4D4D4D; font-family: "DejaVu Sans";' textLength='5.73px' lengthAdjust='spacingAndGlyphs'>75</text>
-<polyline points='16.71,104.20 65.23,104.20 ' style='stroke-width: 0.32; stroke: #A9A9A9; stroke-linecap: butt;' />
+<polyline points='16.71,104.20 67.04,104.20 ' style='stroke-width: 0.32; stroke: #A9A9A9; stroke-linecap: butt;' />
 <text transform='translate(7.12,52.92) rotate(-90)' text-anchor='middle' style='font-size: 7.50px;fill: #656565; font-family: "DejaVu Sans";' textLength='26.19px' lengthAdjust='spacingAndGlyphs'>Counts</text>
-<text x='70.16' y='8.69' style='font-size: 7.50px; font-family: "DejaVu Sans";' textLength='51.88px' lengthAdjust='spacingAndGlyphs'>Bacteroidetes</text>
-<rect x='70.37' y='11.33' width='4.76' height='5.19' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #773501;' />
-<rect x='70.37' y='16.95' width='4.76' height='5.19' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #B47E54;' />
-<rect x='70.37' y='22.56' width='4.76' height='5.19' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #D19564;' />
-<rect x='70.37' y='28.18' width='4.76' height='5.19' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #DBB99D;' />
-<text x='76.99' y='16.11' style='font-size: 6.00px; font-family: "DejaVu Sans";' textLength='46.61px' lengthAdjust='spacingAndGlyphs'>Bacteroidaceae</text>
-<text x='76.99' y='21.73' style='font-size: 6.00px; font-family: "DejaVu Sans";' textLength='44.13px' lengthAdjust='spacingAndGlyphs'>Prevotellaceae</text>
-<text x='76.99' y='27.34' style='font-size: 6.00px; font-family: "DejaVu Sans";' textLength='44.99px' lengthAdjust='spacingAndGlyphs'>Tannerellaceae</text>
-<text x='76.99' y='32.96' style='font-size: 6.00px; font-family: "DejaVu Sans";' textLength='41.89px' lengthAdjust='spacingAndGlyphs'>Marinifilaceae</text>
-<text x='70.16' y='46.41' style='font-size: 7.50px; font-family: "DejaVu Sans";' textLength='38.55px' lengthAdjust='spacingAndGlyphs'>Firmicutes</text>
-<rect x='70.37' y='49.05' width='4.76' height='5.19' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #3E2248;' />
-<rect x='70.37' y='54.66' width='4.76' height='5.19' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #5C396F;' />
-<rect x='70.37' y='60.28' width='4.76' height='5.19' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #6D4B88;' />
-<rect x='70.37' y='65.90' width='4.76' height='5.19' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #9071AA;' />
-<rect x='70.37' y='71.51' width='4.76' height='5.19' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #AC96D2;' />
-<rect x='70.37' y='77.13' width='4.76' height='5.19' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #D8BDDC;' />
-<text x='76.99' y='53.83' style='font-size: 6.00px; font-family: "DejaVu Sans";' textLength='49.44px' lengthAdjust='spacingAndGlyphs'>Clostridiaceae_1</text>
-<text x='76.99' y='59.44' style='font-size: 6.00px; font-family: "DejaVu Sans";' textLength='92.53px' lengthAdjust='spacingAndGlyphs'>Clostridiales_vadinBB60_group</text>
-<text x='76.99' y='65.06' style='font-size: 6.00px; font-family: "DejaVu Sans";' textLength='59.01px' lengthAdjust='spacingAndGlyphs'>Erysipelotrichaceae</text>
-<text x='76.99' y='70.68' style='font-size: 6.00px; font-family: "DejaVu Sans";' textLength='31.72px' lengthAdjust='spacingAndGlyphs'>Family_XIII</text>
-<text x='76.99' y='76.29' style='font-size: 6.00px; font-family: "DejaVu Sans";' textLength='50.66px' lengthAdjust='spacingAndGlyphs'>Lachnospiraceae</text>
-<text x='76.99' y='81.91' style='font-size: 6.00px; font-family: "DejaVu Sans";' textLength='54.26px' lengthAdjust='spacingAndGlyphs'>Ruminococcaceae</text>
-<text x='70.16' y='95.36' style='font-size: 7.50px; font-family: "DejaVu Sans";' textLength='25.21px' lengthAdjust='spacingAndGlyphs'>Others</text>
-<rect x='70.37' y='98.00' width='4.76' height='5.19' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E5E5E5;' />
-<text x='76.99' y='102.78' style='font-size: 6.00px; font-family: "DejaVu Sans";' textLength='20.15px' lengthAdjust='spacingAndGlyphs'>Others</text>
+<text x='71.97' y='0.46' style='font-size: 5.40px; font-family: "DejaVu Sans";' textLength='23.18px' lengthAdjust='spacingAndGlyphs'>Bacillota</text>
+<rect x='72.18' y='2.88' width='4.76' height='4.76' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #9467BD;' />
+<rect x='72.18' y='8.06' width='4.76' height='4.76' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #3E2248;' />
+<rect x='72.18' y='13.24' width='4.76' height='4.76' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #5C396F;' />
+<rect x='72.18' y='18.43' width='4.76' height='4.76' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #6D4B88;' />
+<rect x='72.18' y='23.61' width='4.76' height='4.76' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #9071AA;' />
+<rect x='72.18' y='28.80' width='4.76' height='4.76' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #AC96D2;' />
+<rect x='72.18' y='33.98' width='4.76' height='4.76' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #D8BDDC;' />
+<text x='78.80' y='6.83' style='font-size: 4.32px; font-family: "DejaVu Sans";' textLength='40.23px' lengthAdjust='spacingAndGlyphs'>Anaerovoracaceae</text>
+<text x='78.80' y='12.01' style='font-size: 4.32px; font-family: "DejaVu Sans";' textLength='39.18px' lengthAdjust='spacingAndGlyphs'>Butyricicoccaceae</text>
+<text x='78.80' y='17.20' style='font-size: 4.32px; font-family: "DejaVu Sans";' textLength='36.44px' lengthAdjust='spacingAndGlyphs'>Lachnospiraceae</text>
+<text x='78.80' y='22.38' style='font-size: 4.32px; font-family: "DejaVu Sans";' textLength='34.00px' lengthAdjust='spacingAndGlyphs'>Monoglobaceae</text>
+<text x='78.80' y='27.56' style='font-size: 4.32px; font-family: "DejaVu Sans";' textLength='39.02px' lengthAdjust='spacingAndGlyphs'>Ruminococcaceae</text>
+<text x='78.80' y='32.75' style='font-size: 4.32px; font-family: "DejaVu Sans";' textLength='19.29px' lengthAdjust='spacingAndGlyphs'>UCG-010</text>
+<text x='78.80' y='37.93' style='font-size: 4.32px; font-family: "DejaVu Sans";' textLength='35.14px' lengthAdjust='spacingAndGlyphs'>Oscillospiraceae</text>
+<text x='71.97' y='50.02' style='font-size: 5.40px; font-family: "DejaVu Sans";' textLength='44.54px' lengthAdjust='spacingAndGlyphs'>Cyanobacteriota</text>
+<rect x='72.18' y='52.44' width='4.76' height='4.76' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #329B96;' />
+<text x='78.80' y='56.39' style='font-size: 4.32px; font-family: "DejaVu Sans";' textLength='47.51px' lengthAdjust='spacingAndGlyphs'>Gastranaerophilaceae</text>
+<text x='71.97' y='68.48' style='font-size: 5.40px; font-family: "DejaVu Sans";' textLength='34.44px' lengthAdjust='spacingAndGlyphs'>Bacteroidota</text>
+<rect x='72.18' y='70.89' width='4.76' height='4.76' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #773501;' />
+<rect x='72.18' y='76.08' width='4.76' height='4.76' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #B47E54;' />
+<rect x='72.18' y='81.26' width='4.76' height='4.76' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #D19564;' />
+<rect x='72.18' y='86.45' width='4.76' height='4.76' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #DBB99D;' />
+<text x='78.80' y='74.85' style='font-size: 4.32px; font-family: "DejaVu Sans";' textLength='33.53px' lengthAdjust='spacingAndGlyphs'>Bacteroidaceae</text>
+<text x='78.80' y='80.03' style='font-size: 4.32px; font-family: "DejaVu Sans";' textLength='31.74px' lengthAdjust='spacingAndGlyphs'>Prevotellaceae</text>
+<text x='78.80' y='85.22' style='font-size: 4.32px; font-family: "DejaVu Sans";' textLength='32.39px' lengthAdjust='spacingAndGlyphs'>Tannerellaceae</text>
+<text x='78.80' y='90.40' style='font-size: 4.32px; font-family: "DejaVu Sans";' textLength='30.14px' lengthAdjust='spacingAndGlyphs'>Marinifilaceae</text>
+<text x='71.97' y='102.49' style='font-size: 5.40px; font-family: "DejaVu Sans";' textLength='18.13px' lengthAdjust='spacingAndGlyphs'>Others</text>
+<rect x='72.18' y='104.90' width='4.76' height='4.76' style='stroke-width: 0.32; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #E5E5E5;' />
+<text x='78.80' y='108.86' style='font-size: 4.32px; font-family: "DejaVu Sans";' textLength='14.49px' lengthAdjust='spacingAndGlyphs'>Others</text>
 </g>
 </svg>

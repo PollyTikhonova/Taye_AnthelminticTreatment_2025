@@ -1,14 +1,13 @@
 # custom
-**/codes.txt
-**/R_libraries.txt
 **/logs/*
 .snakemake
 **/conda_envs/
 data/reads/*
-data/QCcontrol/*/fastqc/*
-data/QCcontrol/*/R1/*
 data/dada2/*
+data/QCcontrol/*
 data/database/*
+data/analysis/*
+*.DS_Store
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

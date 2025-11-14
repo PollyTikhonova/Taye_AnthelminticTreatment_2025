@@ -1,0 +1,67 @@
+---
+title: An R Markdown document converted from "./Supplementary Table 1. Metadata, otu_data,
+  tax_data.ipynb"
+output: html_document
+---
+
+```{python}
+import pandas as pd
+import numpy as np
+import os
+import pickle
+from copy import deepcopy
+from tqdm.notebook import tqdm as tq
+import matplotlib.pyplot as plt
+%matplotlib inline
+```
+
+```{python}
+metadata = pd.read_csv('../../data/PRJEB93790.csv')
+```
+
+```{python}
+metadata = pd.read_csv('../../data/PRJEB93790.csv')
+selected_cols = ['run_accession', 'host_subject_id', 'collection_timepoint',  
+                 'host_sex', 'host_age', 'Householdno', 'Wheredoyoulive', 
+                 'Maternaleducationalstatus',
+                 'Ifyeswhenwasthelasttimetheygaveyousuchdewormingpill'] + \
+                sorted([col for col in metadata.columns.values 
+                          if (('sample_eggcount' in col) &
+                              (~col.endswith('baseline')) &
+                              (~col.endswith('followup') &
+                               (~col.endswith('AnySTHs') & 
+                               (~col.endswith('Others')))))]) + \
+                ['sample_eggcountOthers']
+metadata = metadata[selected_cols] 
+metadata['STHStatus'] = ['+' if row[['sample_eggcountAL', 
+                                    'sample_eggcountHW', 
+                                    'sample_eggcountTT']].sum() > 0 else 
+                         '-'
+                        for i, row in metadata.iterrows()]
+metadata.head()
+```
+
+```{python}
+metadata_sample_name = pd.read_csv('../../data/PRJEB93790.csv')[['run_accession', 'sample_alias']]
+metadata_sample_name.index = metadata_sample_name['sample_alias'].values
+
+otu_data = pd.read_csv('../../data/phyloseq/nohost_asv/otu_table.csv', index_col=0)
+tax_data = pd.read_csv('../../data/phyloseq/nohost_asv/tax_table.csv', index_col=0)
+asv_di = {val:'ASV%d'%(i+1) for i, val in enumerate(tax_data.index.values)}
+tax_data.index = [asv_di[val] for val in tax_data.index.values]
+otu_data.columns = [asv_di[val] for val in otu_data.columns.values]
+otu_data.index = metadata_sample_name.loc[otu_data.index.values, 'run_accession'].values
+otu_data = otu_data.loc[metadata.run_accession.values]
+metadata['total_read_counts'] = otu_data.sum(axis=1).values
+
+otu_data = otu_data.apply(lambda x: x/x.sum(), axis=1)
+otu_data.head()
+```
+
+```{python}
+with pd.ExcelWriter('../../results/tables/Table S1. Sample metadata, relative abundance and taxonomy.xlsx') as writer:  
+    metadata.to_excel(writer, sheet_name='Metadata', index=False)
+    otu_data.transpose().to_excel(writer, sheet_name='Relative abundance')
+    tax_data.to_excel(writer, sheet_name='Taxonomy')
+```
+

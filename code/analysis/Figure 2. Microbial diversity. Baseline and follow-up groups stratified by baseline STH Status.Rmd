@@ -1,7 +1,6 @@
 ---
-title: An R Markdown document converted from "github/Taye_AntihelminthicTreatment_2025/code/analysis/Figure
-  2. Microbial diversity. Baseline and follow-up groups stratified by baseline STH
-  Status.ipynb"
+title: An R Markdown document converted from "./Figure 2. Microbial diversity. Baseline
+  and follow-up groups stratified by baseline STH Status.ipynb"
 output: html_document
 ---
 

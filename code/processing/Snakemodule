@@ -34,8 +34,8 @@ rule all:
     # For MultiQC two reports are requested: one performed based on the raw data, 
     # and another is after filtering and trimmning.
     input:
-        expand(config['study_dir']+'QCcontrol/raw/multiqc/multiqc_report_{strand}.html', strand = config['qc']['strand']),
-        rules.filter_trim_all.input,
-        expand(config['study_dir']+'QCcontrol/filtered/multiqc/multiqc_report_{strand}.html', strand = config['qc']['strand']),
+        # expand(config['study_dir']+'QCcontrol/raw/multiqc/multiqc_report_{strand}.html', strand = config['qc']['strand']),
+        # rules.filter_trim_all.input,
+        # expand(config['study_dir']+'QCcontrol/filtered/multiqc/multiqc_report_{strand}.html', strand = config['qc']['strand']),
         rules.dada2_all.input
     default_target: True

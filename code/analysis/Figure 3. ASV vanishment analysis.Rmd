@@ -1,6 +1,5 @@
 ---
-title: An R Markdown document converted from "github/Taye_AntihelminthicTreatment_2025/code/analysis/Figure
-  3. ASV vanishment analysis.ipynb"
+title: An R Markdown document converted from "./Figure 3. ASV vanishment analysis.ipynb"
 output: html_document
 ---
 
@@ -15,12 +14,13 @@ library(ggplot2)
 library(ggpubr)
 library(reshape2)
 library(ggnewscale)
+library(writexl)
 ```
 
 ```{r}
 dir.create(file.path('../../results/figures'), showWarnings = FALSE)
 dir.create(file.path('../../results/figures', 'figure3'), showWarnings = FALSE)
-dir.create(file.path('../../results/figures', 'supplementary_figure2'), showWarnings = FALSE)
+dir.create(file.path('../../results/figures', 'supplementary_figure1'), showWarnings = FALSE)
 ```
 
 ### Loading data
@@ -185,8 +185,8 @@ options(repr.plot.width = width, repr.plot.height = height)
 p <- ggplot(odds, aes(x=odds)) + 
    geom_histogram(color="black", fill="white") +
    geom_vline(xintercept = threshold, linetype="dashed") +
-   annotate("text", x=6, y=900, 
-            label= paste0("p-value <  0.05:\n threshold = ", round(threshold, 2)), size=7) + 
+   annotate("text", x=4.5, y=900, 
+            label= paste0("Quantile 95%:\nOdds = ", round(threshold, 2)), size=7, hjust = 0) + 
    xlim(0, 8.5) +
    labs(x = "Odds", y = "Counts", title = 'ASV odds of depletion') +
    theme_minimal() +
@@ -206,9 +206,20 @@ p <- ggplot(odds, aes(x=odds)) +
        ) 
 
 k = 0.3
-ggsave(file=file.path('../../results/figures', 'supplementary_figure2', 'histogram.svg'), plot=p, 
+ggsave(file=file.path('../../results/figures', 'supplementary_figure1', 'histogram.svg'), plot=p, 
        width=width*k, height=height*k, scaling = k)
 p
+```
+
+```{r}
+odds_table <- odds
+odds_table$counts_absence <- as.vector(unlist(lapply(odds_table$values, function(x) strsplit(x, split=' ')[[1]][1])))
+odds_table$counts_presence <- as.vector(unlist(lapply(odds_table$values, function(x) strsplit(x, split=' ')[[1]][2])))
+odds_table <- odds_table[, c('genera', 'genera_name', 'counts_absence', 'counts_presence', 'odds', 'pvalue')]
+colnames(odds_table) <- c('ASV', 'taxonomy', 'counts_absence', 'counts_presence', 'odds', 'pvalue')
+odds_table <- list(Odds = odds_table)
+write_xlsx(odds_table, file.path('../../results/tables', 
+                                             'Table S2.Vanishment_analysis.xlsx'))
 ```
 
 ### Identify ASVs that present significantly less frequent in the follow-up cohort than in the baseline cohort
@@ -258,6 +269,21 @@ df_bar_trimmed_STHPositive$group <- 'STHPositive'
 ```
 
 ```{r}
+sum(df_bar_trimmed_STHNegative$Counts)
+sum(df_bar_trimmed_STHPositive$Counts)
+```
+
+```{r}
+df_bar_ <- df_bar_trimmed_STHNegative
+row.names(df_bar_) <- df_bar_trimmed_STHNegative$Family
+df_bar_[df_bar_trimmed_STHPositive$Family, 'Counts'] <- 0
+df_bar_[df_bar_trimmed_STHNegative$Family,  'Counts'] <- df_bar_trimmed_STHNegative$Counts
+df_bar_[df_bar_trimmed_STHPositive$Family,  'Counts'] <- df_bar_[df_bar_trimmed_STHPositive$Family, 'Counts'] + df_bar_trimmed_STHPositive$Counts
+df_bar_$fraction <- df_bar_$Counts/sum(df_bar_$Counts)
+df_bar_[order(-df_bar_$fraction), c('Counts', 'fraction')]
+```
+
+```{r}
 # combine Family counts into one table
 df_bar_trimmed <- rbind(df_bar_trimmed_STHNegative, df_bar_trimmed_STHPositive)
 # create a column of a counts order by Phylum
@@ -274,7 +300,7 @@ df_bar_trimmed
 ```
 
 ```{r}
-# To create a "stacked" barplot add the total Phylum counts to the first Family counts of the next Phylum
+#To create a "stacked" barplot add the total Phylum counts to the first Family counts of the next Phylum
 # create row names
 row.names(df_bar_trimmed) <- paste(df_bar_trimmed$Family, df_bar_trimmed$group, sep=';')
 # 1. add a total counts of all Phylums except 'Others' to the Others'coutns
@@ -291,19 +317,30 @@ df_bar_trimmed[c('Others;STHNegative', 'Others;STHPositive'), 'Counts'] <- df_ba
 # add Firmicutes Phylum counts to the first Families of the Bacteroides family 
 # in STHNegative and STHPositive groups
 # select Firmicutes Phylum counts
-add_counts <- dplyr::filter(df_bar_trimmed, df_bar_trimmed$Phylum == "Firmicutes")
+add_counts <- dplyr::filter(df_bar_trimmed, (df_bar_trimmed$Phylum == "Bacillota")|(df_bar_trimmed$Phylum == "Bacteroidota"))
 # calculate the total counts of Firmicutes Phylum
 add_counts <- aggregate(Counts ~ group, add_counts, sum)
 # ensure an order by group
 add_counts <- add_counts[order(add_counts$group), ]
 # add counts to the first Families of the Bacteroides family 
-df_bar_trimmed[c('Tannerellaceae;STHNegative', 'Prevotellaceae;STHPositive'), 'Counts'] <- df_bar_trimmed[c('Tannerellaceae;STHNegative', 'Prevotellaceae;STHPositive'), 'Counts']+add_counts$Counts
+df_bar_trimmed[c('Gastranaerophilaceae;STHNegative'), 'Counts'] <- df_bar_trimmed[c('Gastranaerophilaceae;STHNegative'), 'Counts']+add_counts$Counts[1]
+
+# add Firmicutes Phylum counts to the first Families of the Bacteroides family 
+# in STHNegative and STHPositive groups
+# select Firmicutes Phylum counts
+add_counts <- dplyr::filter(df_bar_trimmed, df_bar_trimmed$Phylum == "Bacillota")
+# calculate the total counts of Firmicutes Phylum
+add_counts <- aggregate(Counts ~ group, add_counts, sum)
+# ensure an order by group
+add_counts <- add_counts[order(add_counts$group), ]
+# add counts to the first Families of the Bacteroides family 
+df_bar_trimmed[c('Bacteroidaceae;STHNegative', 'Bacteroidaceae;STHPositive'), 'Counts'] <- df_bar_trimmed[c('Bacteroidaceae;STHNegative', 'Bacteroidaceae;STHPositive'), 'Counts']+add_counts$Counts
 ```
 
 ```{r}
 # plot
 # set a plot size
-width = 8
+width = 6
 height = 5
 options(repr.plot.width = width, repr.plot.height = height)
 
@@ -312,17 +349,22 @@ p <- ggplot(data=df_bar_trimmed) +
       geom_bar(data = ~ dplyr::filter(., Phylum == "Others") %>% dplyr::rename(Others = Family), 
               mapping = aes(x=group, y=Counts, fill=Others), 
               stat="identity") +
-      scale_fill_manual(values=c('#e5e5e5', '#e5e5e5'))+
+     scale_fill_manual(values=c('#e5e5e5', '#e5e5e5'))+
       new_scale_fill() +
-      geom_bar(data = ~ dplyr::filter(., Phylum == "Bacteroidetes") %>% dplyr::rename(Bacteroidetes = Family),  
-              mapping = aes(x=group, y=Counts, fill=Bacteroidetes), 
+      geom_bar(data = ~ dplyr::filter(., Phylum == "Cyanobacteriota") %>% dplyr::rename(Cyanobacteriota = Family), 
+              mapping = aes(x=group, y=Counts, fill=Cyanobacteriota), 
+              stat="identity") +
+      scale_fill_manual(values=c('#329b96'))+
+      new_scale_fill() +
+      geom_bar(data = ~ dplyr::filter(., Phylum == "Bacteroidota") %>% dplyr::rename(Bacteroidota = Family),  
+              mapping = aes(x=group, y=Counts, fill=Bacteroidota), 
               stat="identity") +
       scale_fill_manual(values=rev(c('#dbb99d', '#d19564', '#b47e54', '#773501')))+
       new_scale_fill() +
-      geom_bar(data = ~ dplyr::filter(., Phylum == "Firmicutes") %>% dplyr::rename(Firmicutes = Family),  
-              mapping = aes(x=group, y=Counts, fill=Firmicutes), 
+      geom_bar(data = ~ dplyr::filter(., Phylum == "Bacillota") %>% dplyr::rename(Bacillota = Family),  
+              mapping = aes(x=group, y=Counts, fill=Bacillota), 
               stat="identity") +
-      scale_fill_manual(values=rev(c('#d8bddc',  '#ac96d2', '#9071aa', '#6d4b88', '#5c396f', '#3e2248')))+
+      scale_fill_manual(values=rev(c('#d8bddc',  '#ac96d2', '#9071aa', '#6d4b88', '#5c396f', '#3e2248', '#9467bd')))+
       new_scale_fill() +
       scale_y_continuous(limits = c(0, 90), expand = c(0,0)) +
       theme_minimal() + 
@@ -337,7 +379,7 @@ p <- ggplot(data=df_bar_trimmed) +
             axis.title.y = element_text(color='#656565', face='plain'),
             axis.ticks.x=element_blank(), 
             axis.ticks.length.x.bottom=unit(0.5, "lines"),
-            text = element_text(size = 25, face="plain"), 
+            text = element_text(size = 18, face="plain"), 
             axis.line.y = element_line(color = "darkgrey", linewidth = 0.5), 
             axis.line.x.bottom = element_line(color = "darkgrey", linewidth = 0.5), 
             panel.border = element_rect(fill = NA, colour = "grey70", linewidth = rel(1)),

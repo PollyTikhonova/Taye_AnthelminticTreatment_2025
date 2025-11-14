@@ -1,6 +1,6 @@
 ---
-title: An R Markdown document converted from "github/Taye_AntihelminthicTreatment_2025/code/analysis/Figure
-  4. ALDEx2 analysis. Wilcoxon test.ipynb"
+title: An R Markdown document converted from "./Figure 4. ALDEx2 analysis. Wilcoxon
+  test.ipynb"
 output: html_document
 ---
 
@@ -160,7 +160,7 @@ p <- EnhancedVolcano(aldex2_res,
     FCcutoff = 0,
     labSize = 6,
 #     legendPosition = 'right',
-    legendPosition = c(0.25, 0.88),
+    legendPosition = c(0.28, 0.88),
     legendLabSize = 20, 
     legendLabels = c("", "Non-significant", "", "p-adjusted < 0.05"),
     pointSize=aldex2_res$point_size, 
@@ -169,7 +169,7 @@ p <- EnhancedVolcano(aldex2_res,
     arrowheads = FALSE,
     colAlpha=0.5,
     col = c("grey30", "grey30", "royalblue", "#c88c1c" ),
-    title = bquote("Samples: all"),
+    title = bquote("Samples: all subjects"),
     subtitle = "ALDEx2 paired Wilcoxon test:\nBaseline vs 1-year follow-up.",
     titleLabSize = 24,
     subtitleLabSize = 22,
@@ -193,7 +193,8 @@ otu_data_boxplot$grouping <- factor(metadata_aldex2$collection_timepoint, levels
 levels(otu_data_boxplot$grouping) <- c("Baseline", "1-year\nfollow-up")
 otu_data_boxplot$host_subject_id <- metadata_aldex2$host_subject_id
 otu_data_boxplot <- melt(otu_data_boxplot)
-levels(otu_data_boxplot$variable) <- c('Blautia', 'Senegalimassilia', 'Lachnospiraceae_ND3007_group')
+otu_data_boxplot$variable <- factor(otu_data_boxplot$variable, 
+                                    levels=c('Senegalimassilia', 'Blautia', 'Marvinbryantia'))
 ```
 
 ```{r}
@@ -313,7 +314,7 @@ p <- ggplot(otu_data_boxplot) +
       scale_fill_manual(values = c('#878787', '#b9a04f')) + 
       scale_colour_manual(values = c('#878787', '#b9a04f')) +
 # add titles
-      labs(x = "", y = "Relative abundance", title = "Samples: -STH at baseline",
+      labs(x = "", y = "Relative abundance", title = bquote("Samples: all subjects"),
            subtitle = "ALDEx2 paired Wilcoxon test:\nBaseline vs 1-year follow-up.") +
 # ensure the maximum y axis limit is high enough to fit all the neccesary info 
       geom_blank(data = otu_data_max, aes(x = grouping, y=value, group = host_subject_id)) +
@@ -501,7 +502,7 @@ p <- EnhancedVolcano(aldex2_res,
     pCutoff = pCutoff,
     FCcutoff = 0,
     labSize = 6,
-    legendPosition = c(0.25, 0.88),
+    legendPosition = c(0.28, 0.88),
     legendLabSize = 20, 
     legendLabels = c("", "Non-significant", "",  "p-adjusted < 0.05"),
     pointSize=aldex2_res$point_size, 
@@ -533,7 +534,8 @@ otu_data_boxplot$grouping <- factor(metadata_aldex2$collection_timepoint, levels
 levels(otu_data_boxplot$grouping) <- c("Baseline", "1-year\nfollow-up")
 otu_data_boxplot$host_subject_id <- metadata_aldex2$host_subject_id
 otu_data_boxplot <- melt(otu_data_boxplot)
-levels(otu_data_boxplot$variable) <- c('Blautia', 'Senegalimassilia', 'Lachnospiraceae_ND3007_group')
+otu_data_boxplot$variable <- factor(otu_data_boxplot$variable, 
+                                    levels=c( 'Senegalimassilia', 'Blautia', 'Marvinbryantia'))
 ```
 
 ```{r}
@@ -652,7 +654,7 @@ p <- ggplot(otu_data_boxplot) +
       scale_fill_manual(values = c('#878787', '#b9a04f')) +
       scale_colour_manual(values = c('#878787', '#b9a04f')) +
 # add titles
-      labs(x = "", y = "Relative abundance", title = "Samples: -STH at baseline",
+      labs(x = "", y = "Relative abundance", title = bquote("Samples: -STH at baseline"),
            subtitle = "ALDEx2 paired Wilcoxon test:\nBaseline vs 1-year follow-up.") +
 # expand y limits to fit the p-value statistics into a plot
       scale_y_continuous(expand = expansion(mult = 0.03)) +
@@ -835,7 +837,7 @@ p <- EnhancedVolcano(aldex2_res,
     pCutoff = pCutoff,
     FCcutoff = 0,
     labSize = 6,
-    legendPosition = c(0.25, 0.88),
+    legendPosition = c(0.28, 0.88),
     legendLabSize = 20, 
     legendLabels = c("", "Non-significant", "", "p-adjusted < 0.05"),
     pointSize=aldex2_res$point_size, 
@@ -867,8 +869,8 @@ otu_data_boxplot$grouping <- factor(metadata_aldex2$collection_timepoint, levels
 levels(otu_data_boxplot$grouping) <- c("Baseline", "1-year\nfollow-up")
 otu_data_boxplot$host_subject_id <- metadata_aldex2$host_subject_id
 otu_data_boxplot <- melt(otu_data_boxplot)
-levels(otu_data_boxplot$variable) <- c('Lachnospiraceae_FCS020_group', 
-                                       'Senegalimassilia', 'Lachnospiraceae_ND3007_group')
+otu_data_boxplot$variable <- factor(otu_data_boxplot$variable, 
+                                   levels=c('Senegalimassilia', 'Collinsella', 'Intestinimonas'))
 ```
 
 ```{r}
@@ -962,7 +964,7 @@ otu_data_max$value <- otu_data_max$value*1.1
 ```
 
 ```{r}
-width = 18
+width = 14
 height = 7
 options(repr.plot.width=width, repr.plot.height=height)
 comparisons <- list(c("Baseline", "1-year\nfollow-up"))
@@ -985,7 +987,7 @@ p <- ggplot(otu_data_boxplot) +
       scale_fill_manual(values = c('#878787', '#b9a04f')) + 
       scale_colour_manual(values = c('#878787', '#b9a04f')) +
 # add titles
-      labs(x = "", y = "Relative abundance", title = "Samples: -STH at baseline",
+      labs(x = "", y = "Relative abundance", title = bquote("Samples: +STH at baseline"),
            subtitle = "ALDEx2 paired Wilcoxon test:\nBaseline vs 1-year follow-up.") +
 # expand y limits to fit the p-value statistics into a plot
       scale_y_continuous(expand = expansion(mult = 0.03)) +
@@ -1020,6 +1022,6 @@ print(p)
 p_values_summary_table <- list(All = p_values_summary_table_1, 
                                STH_negative = p_values_summary_table_2, 
                                STH_positive= p_values_summary_table_3)
-write_xlsx(p_values_summary_table, file.path('../../results/tables', 'Table S1.ALDEx2.Wilcoxon_test.xlsx'))
+write_xlsx(p_values_summary_table, file.path('../../results/tables', 'Table S3.ALDEx2.Wilcoxon_test.xlsx'))
 ```
 

@@ -1,6 +1,6 @@
 ---
-title: An R Markdown document converted from "github/Taye_AntihelminthicTreatment_2025/code/analysis/Figure
-  3. Microbial relative abudance barplots.ipynb"
+title: An R Markdown document converted from "./Figure 3. Microbial relative abudance
+  barplots.ipynb"
 output: html_document
 ---
 
@@ -135,10 +135,13 @@ top_nested <- top_taxa(ps_merged_STH,
 p <- plot_nested_bar(ps_obj = top_nested$ps_obj,
                 top_level = "Phylum",
                 nested_level = "Genus", 
-                palette = c(Bacteroidetes = "#763501", 
-                            Proteobacteria = "#b9a04f", 
-                            Elusimicrobia = '#f1c200', 
-                            Spirochaetes =  '#006531' 
+                palette = c(Bacteroidota = "#763501", 
+                            Bacillota = "#3e2248",
+#                             Cyanobacteriota = "#835269",
+                            Cyanobacteriota = "#329b96",
+                            Pseudomonadota = "#b9a04f", 
+                            Elusimicrobiota = '#f1c200', 
+                            Spirochaetota =  '#006531' 
                            )) +
       theme_minimal() +
       theme(axis.text=element_text(size=15),

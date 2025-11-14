@@ -14,8 +14,8 @@ dada2:
   metadata: '../../../data/metadata.tsv'
   script_dir: '../scripts/dada2'
   pool: FALSE
-  db_silva: "../../../data/database/silva_nr_v132_train_set.fa.gz"
-  db_species: "../../../data/database/silva_species_assignment_v132.fa.gz"
+  db_silva: "../../../data/database/silva_nr99_v138.2_toGenus_trainset.fa.gz"
+  db_species: "../../../data/database/silva_v138.2_assignSpecies.fa.gz"
   conda: 'conda_env.dada2.yaml'
 
 # common parameters for all rules
