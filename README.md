@@ -1,7 +1,7 @@
-# Analysis of antihelminthic treatment dataset
+# Analysis of anthelmintic treatment dataset
 
- [![License CCO v.1](https://img.shields.io/github/license/PollyTikhonova/Taye_AntihelminthicTreatment_2025?v=1
-)](https://github.com/PollyTikhonova/Taye_AntihelminthicTreatment_2025/blob/main/LICENSE)
+ [![License CCO v.1](https://img.shields.io/github/license/PollyTikhonova/Taye_AnthelminticTreatment_2025?v=1
+)](https://github.com/PollyTikhonova/Taye_AnthelminticTreatment_2025/blob/main/LICENSE)
  doi shield
 
 Code accompanying the manuscript "Microbiome responses to anthelmintic treatment are contingent on pre-treatment helminth infection status in young Ethiopian children: A longitudinal study".
