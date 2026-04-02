@@ -2,7 +2,7 @@
 
  [![License CCO v.1](https://img.shields.io/github/license/PollyTikhonova/Taye_AnthelminticTreatment_2025?v=1
 )](https://github.com/PollyTikhonova/Taye_AnthelminticTreatment_2025/blob/main/LICENSE)
- doi shield
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19390928.svg)](https://doi.org/10.5281/zenodo.19390928)
 
 Code accompanying the manuscript "Microbiome responses to anthelmintic treatment are contingent on pre-treatment helminth infection status in young Ethiopian children: A longitudinal study".
 
