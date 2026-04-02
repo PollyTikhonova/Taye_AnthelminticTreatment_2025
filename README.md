@@ -4,7 +4,7 @@
 )](https://github.com/PollyTikhonova/Taye_AnthelminticTreatment_2025/blob/main/LICENSE)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19390928.svg)](https://doi.org/10.5281/zenodo.19390928)
 
-Code accompanying the manuscript "Microbiome responses to anthelmintic treatment are contingent on pre-treatment helminth infection status in young Ethiopian children: A longitudinal study".
+Code accompanying the manuscript "Microbiome responses to anthelmintic treatment depend on pre-treatment helminth infection status in young Ethiopian children".
 
 Abstract: Mass deworming programs using effective anthelmintic drugs are essential for controlling soil-transmitted helminth (STH) infections, particularly in high-risk developing regions. However, it remains unclear whether routine deworming induces long-term alterations in gut microbiome composition, especially when accounting for individual infection status. This study aims to explore the changes in the gut microbiomes of Ethiopian children one year after the administration of an anthelmintic treatment.
 
