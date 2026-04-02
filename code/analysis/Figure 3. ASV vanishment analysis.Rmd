@@ -169,7 +169,7 @@ odds_STHPositive$genera_name <- tax_data[odds_STHPositive$genera, 'name'] # join
 # combine odds for computed for postive and negative STH status (at the baseline) groups 
 odds <- rbind(odds_STHNegative, odds_STHPositive)
 # calculate p-values
-odds$pvalue <- lapply(odds$odds, function(x){1-sum(x>odds$odds)/length(odds$odds)})
+odds$pvalue <- sapply(odds$odds, function(x){1-sum(x>odds$odds)/length(odds$odds)})
 # calculate an odds threshold for the significant p-value
 threshold <- min(odds[odds$pvalue < 0.05, 'odds'])
 ```
@@ -219,7 +219,7 @@ odds_table <- odds_table[, c('genera', 'genera_name', 'counts_absence', 'counts_
 colnames(odds_table) <- c('ASV', 'taxonomy', 'counts_absence', 'counts_presence', 'odds', 'pvalue')
 odds_table <- list(Odds = odds_table)
 write_xlsx(odds_table, file.path('../../results/tables', 
-                                             'Table S2.Vanishment_analysis.xlsx'))
+                                             'Supplementary Data 3.xlsx'))
 ```
 
 ### Identify ASVs that present significantly less frequent in the follow-up cohort than in the baseline cohort

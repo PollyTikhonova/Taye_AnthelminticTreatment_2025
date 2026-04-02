@@ -111,7 +111,6 @@ All analysis codes are implemented in R and stored in the `codes/processing` dir
 1. Dataset overview
    - `Figure 1. Data Overview.` (_Chi-squared test of demographic characteristics, sample counts_).
    - `Figure 3. Microbial relative abundance barplots.`
-   - `Supplementary Table 1. Metadata, otu_data, tax_data.`
 2. Microbial diversity
    - `Figure 2. Microbial diversity.` (_baseline vs follow-up groups_).
    - `Figure 2. Microbial diversity. Baseline and follow-up groups stratified by baseline STH Status.` (_baseline vs follow-up groups_).

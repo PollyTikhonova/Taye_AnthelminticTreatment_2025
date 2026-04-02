@@ -1022,6 +1022,6 @@ print(p)
 p_values_summary_table <- list(All = p_values_summary_table_1, 
                                STH_negative = p_values_summary_table_2, 
                                STH_positive= p_values_summary_table_3)
-write_xlsx(p_values_summary_table, file.path('../../results/tables', 'Table S3.ALDEx2.Wilcoxon_test.xlsx'))
+write_xlsx(p_values_summary_table, file.path('../../results/tables', 'Supplementary Data 4.xlsx'))
 ```
 
